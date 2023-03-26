@@ -8,7 +8,7 @@ import jakarta.validation.constraints.Size;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name= "tb_produto")
+@Table(name= "tb_produtos")
 public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,7 +17,7 @@ public class Produto {
     @Size(min=2, max=20,message = "O atriuto nome é obrigatorio.")
     private String nome;
     @NotBlank
-    @Size(min=2, max=20,message = "O atriuto nome é obrigatorio.")
+    @Size(min=2, max=400,message = "O atriuto nome é obrigatorio.")
     private String descricao;
     @NotNull
     private BigDecimal preco;
